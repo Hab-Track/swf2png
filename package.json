@@ -1,0 +1,29 @@
+{
+  "name": "swf2png",
+  "version": "1.0.0",
+  "description": "Convert swf file to png",
+  "main": "example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hab-Track/swf2png.git"
+  },
+  "keywords": [
+    "swf",
+    "habbo",
+    "png",
+    "convert"
+  ],
+  "author": "Lande",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hab-Track/swf2png/issues"
+  },
+  "homepage": "https://github.com/Hab-Track/swf2png#readme",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "swf-extract": "^1.1.0"
+  }
+}
