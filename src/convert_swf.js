@@ -33,15 +33,14 @@ async function createSpritesheet(imagePromises) {
     return spritesheet;
 }
 
-async function extractImagesFromSWF(swfFilePath) {
-    const rawData = fs.readFileSync(swfFilePath);
+async function extractImagesFromSWF(rawData) {
     const swf = await readFromBufferP(rawData);
     return await Promise.all(extractImages(swf.tags));
 }
 
-async function swf2png(swfFilePath) {
+async function swf2png(rawData) {
     // Extract images from the SWF file
-    const imagePromises = await extractImagesFromSWF(swfFilePath);
+    const imagePromises = await extractImagesFromSWF(rawData);
 
     // Return spritesheet from extracted images
     return await createSpritesheet(imagePromises);
